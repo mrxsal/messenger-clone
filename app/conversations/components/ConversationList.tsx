@@ -1,6 +1,6 @@
 "use client";
 
-import useConveration from "@/app/hooks/useConversation";
+import useConversation from "@/app/hooks/useConversation";
 import { FullConversationType } from "@/app/types";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
@@ -18,7 +18,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
 }) => {
   const [items, setItems] = useState(initialItems);
   const router = useRouter();
-  const { conversationId, isOpen } = useConveration();
+  const { conversationId, isOpen } = useConversation();
   return (
     <aside
       className={clsx(

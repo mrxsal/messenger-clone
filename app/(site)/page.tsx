@@ -13,6 +13,7 @@ export default function Home() {
           className="mx-auto w-auto"
           src="/images/logo.png"
         />
+        <h3 className="mt-2 text-center text-lg font-bold tracking-tight">Nomad Cowork Messenger</h3>
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
           Sign in to your account
         </h2>
