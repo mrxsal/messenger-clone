@@ -35,7 +35,7 @@ export async function POST(request: Request) {
           users: true,
         },
       });
-      return newConversation;
+      return NextResponse.json(newConversation);
     }
 
     const existingConversations = await prisma.conversation.findMany({
@@ -73,6 +73,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(newConversation);
   } catch (error: any) {
+    console.log(error, "Error creating chat");
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
